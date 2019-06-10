@@ -1,0 +1,16 @@
+apiVersion: skaffold/v1beta11
+kind: Config
+build:
+  artifacts:
+  - image: treeptik/voting-app/vote
+    context: ./vote
+    jibGradle: {}
+deploy:
+  kubectl:
+    manifests:
+    - ./vote/kubernetes/*
+profiles:
+  - name: 
+    build:
+      tagPolicy:
+        gitCommit: {}
