@@ -10,7 +10,7 @@ deploy:
     manifests:
     - ./vote/kubernetes/*
 profiles:
-  - name: 
+  - name:
     build:
       tagPolicy:
         gitCommit: {}
